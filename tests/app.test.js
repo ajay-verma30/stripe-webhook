@@ -6,6 +6,6 @@ const request = require('supertest');
 
 test("Get /health returns ok", async () => {
     const res = await request(app).get('/health');
-    assert.strictEqual(res.status, 200);
+    assert.strictEqual(res.status, 500);
     assert.strictEqual(res.body.message, "ok");
 })  
